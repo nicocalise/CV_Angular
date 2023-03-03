@@ -1,0 +1,12 @@
+<ul *ngFor ="let exp of workExperience.experience">
+    <li><h3>{{exp.role}}</h3></li>
+    <li>Rango de fecha: {{exp.dateBetween}}</li>
+    <li>Empresa: {{exp.company}}</li>
+    <p *ngIf= "exp?.tecno?.length">
+        Tecnologias utilizadas
+    </p>
+    <ul *ngFor = "let tec of exp.tecno">
+        <li>{{tec.name}}</li>
+    </ul>
+</ul>
+

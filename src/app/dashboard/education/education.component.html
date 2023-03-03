@@ -1,0 +1,8 @@
+
+<ul *ngFor="let univ of education.university">
+    <li>Universidad: {{univ.name}}</li>
+    <li>Titulo: {{univ.title}}</li>
+    <li>Periodo: {{univ.period}}</li>
+    <li *ngIf = "univ.finished as value ; else elseBlock">Finalizada</li>
+    <ng-template #elseBlock>No finalizada</ng-template>
+</ul>
